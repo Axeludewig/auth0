@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Image from "next/image";
 
 function Mobilenavbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,14 @@ function Mobilenavbar() {
 			>
 				{/* Drawer contents */}
 				<div className="p-4">
-					<ul className="w-[200px]">
+					<Image
+						width={50}
+						height={50}
+						src="/zen44.png"
+						className="h-8 mr-3"
+						alt="Renzahuer Goth logo"
+					/>
+					<ul className="w-[200px] flex flex-col gap-4">
 						<li>Login</li>
 						<li>Tienda</li>
 						<li>Blog</li>
