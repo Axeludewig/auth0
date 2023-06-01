@@ -41,16 +41,16 @@ function ProductList() {
 	if (isLoading) return <div>Loading...</div>;
 
 	return (
-		<div className="flex flex-col justify-center items-center text-center">
-			<h1 className="mb-4">Lista de productos</h1>
+		<div className="flex flex-col justify-center items-center text-center gap-4">
+			<h1 className="mb-4 text-xl font-extrabold">Lista de productos</h1>
 			{products.map((product) => (
 				<div
-					className="p-4 border-2 "
+					className="p-4 border-2 w-[250px] h-[270px] rounded border-slate-600 shadow-xl"
 					key={product._id}
 				>
 					<div>
 						{product.images && (
-							<div>
+							<div className="flex flex-col justify-center items-center">
 								{product.images.map((image: any) => (
 									<img
 										key={image.asset._id}
@@ -58,6 +58,7 @@ function ProductList() {
 										alt={product.title}
 										width="150"
 										height="150"
+										className=""
 									/>
 								))}
 							</div>
@@ -70,6 +71,9 @@ function ProductList() {
 						<p>{product.description}</p>
 						<p className="font-semibold">${product.price} MXN</p>
 					</div>
+					<button className="border rounded p-2 border-slate-600 m-4">
+						Comprar
+					</button>
 				</div>
 			))}
 		</div>
