@@ -7,6 +7,7 @@ import Image from "next/image";
 import Login from "./login";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import UserIconLogin from "./userIconLogin";
 
 function Mobilenavbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,8 @@ function Mobilenavbar() {
 	}
 
 	return (
-		<div>
-			<nav className="fixed top-0 left-0 md:hidden w-full">
+		<div className="">
+			<nav className="top-0 left-0 md:hidden w-full min-w-screen h-12 ">
 				<div className="bg-purple-200 p-2 flex justify-between">
 					<div
 						className="p-2 w-10"
@@ -31,7 +32,7 @@ function Mobilenavbar() {
 					</div>
 					<div className="p-2 flex gap-6">
 						<div>
-							<PersonIcon />
+							<UserIconLogin />
 						</div>
 						<div>
 							<ShoppingCartIcon />

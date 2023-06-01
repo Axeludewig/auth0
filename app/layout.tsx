@@ -5,6 +5,9 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import Mobilenavbar from "@/components/mobilenavbar";
+import Navbar from "@/components/navbar";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +24,19 @@ export default function RootLayout({
 	return (
 		<UserProvider>
 			<html lang="en">
-				<body className={inter.className}>{children}</body>
+				<Head>
+					<style>
+						@import
+						url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+					</style>
+				</Head>
+				<body className={inter.className}>
+					<header className="mb-16 md:mb-24">
+						<Mobilenavbar />
+						<Navbar />
+					</header>
+					{children}
+				</body>
 			</html>
 		</UserProvider>
 	);
