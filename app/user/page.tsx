@@ -41,7 +41,6 @@ function User() {
 						<div className="overflow-hidden rounded-full content-stretch mx-auto md:mb-8 mb-8">
 							<img
 								src={user?.picture}
-								alt={user?.name}
 								width="100"
 								height="100"
 								className="rounded-full border-2 border-slate-600 "

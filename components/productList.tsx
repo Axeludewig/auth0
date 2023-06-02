@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
 
 function ProductList() {
 	const [products, setProducts] = useState<any[]>([]);
@@ -38,14 +40,23 @@ function ProductList() {
 		fetchData();
 	}, []);
 
-	if (isLoading) return <div>Loading...</div>;
+	if (isLoading) return (
+		<div className="p-2 my-auto mx-auto animate-bounce ml-40 mt-40">
+			<HourglassBottomIcon className="w-24 h-24 md:w-24 md:h-24" />
+		</div>
+	);
 
 	return (
 		<div className="flex flex-col justify-center items-center text-center gap-4">
-			<h1 className="mb-4 text-xl font-extrabold">Lista de productos</h1>
+			<div className="bg-gradient-to-r from-arelylle to-gris hover:from-purple-600 hover:to-purple-200 p-4 md:p-8 w-full">
+				<h1 className="md:text-5xl text-3xl font-extrabold text-white fontPTSerif">
+					NUEVO
+				</h1>
+			</div>
+
 			{products.map((product) => (
 				<div
-					className="p-4 border-2 w-[250px] h-[270px] rounded border-slate-600 shadow-xl"
+					className="p-4 border-2 w-[250px] h-[270px] rounded border-grisclaro shadow-xl"
 					key={product._id}
 				>
 					<div>
@@ -71,9 +82,11 @@ function ProductList() {
 						<p>{product.description}</p>
 						<p className="font-semibold">${product.price} MXN</p>
 					</div>
-					<button className="border rounded p-2 border-slate-600 m-4">
-						Comprar
-					</button>
+					<div className="">
+						<button className="border rounded p-2 border-slate-600 m-4 px-8 bg-gris text-white font-semibold">
+							Comprar
+						</button>
+					</div>
 				</div>
 			))}
 		</div>
@@ -81,3 +94,4 @@ function ProductList() {
 }
 
 export default ProductList;
+

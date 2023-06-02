@@ -29,11 +29,19 @@ export default function RootLayout({
 						@import
 						url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 					</style>
+					<style>
+						@import
+						url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+					</style>
 				</Head>
 				<body className={inter.className}>
-					<header className="mb-16 md:mb-24">
-						<Mobilenavbar />
-						<Navbar />
+					<header className="">
+						<div>
+							<Mobilenavbar />
+						</div>
+						<div>
+							<Navbar />
+						</div>
 					</header>
 					{children}
 				</body>

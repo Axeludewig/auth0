@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
-function ProductSearch() {
+function ProductSearchMobile() {
 	return (
 		<div className="flex items-center">
 			{" "}
@@ -9,10 +9,10 @@ function ProductSearch() {
 			<input
 				id="search"
 				type="search"
-				className="text-sm p-2 rounded-full border-2 border-gris w-[500px]"
+				className="text-sm p-2 rounded-full border-2 border-slate-600 w-[200px]"
 				placeholder="Buscar productos ..."
 			/>
-			<div className="rounded-full h-10 w-10 text-slate-600 flex items-center justify-center active:bg-black active:text-white -ml-10 ">
+			<div className="rounded-full h-10 w-10 text-slate-600 flex items-center justify-center active:bg-black active:text-white -ml-10">
 				{" "}
 				{/* Added items-center and justify-center classes */}
 				<SearchIcon className="active:text-white" />
@@ -21,4 +21,4 @@ function ProductSearch() {
 	);
 }
 
-export default ProductSearch;
+export default ProductSearchMobile;

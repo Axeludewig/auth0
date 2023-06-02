@@ -19,10 +19,10 @@ function Login() {
 	if (user) {
 		return (
 			<div className="flex flex-col gap-4">
-				<p>Bienvenido, {user.name}! </p>
+				<p>¡Bienvenido, {user.name}! </p>
 				<a href="/api/auth/logout">
-					<button className="p-4 border border-black rounded-xl shadow-xl">
-						Cerrar sesión
+					<button className="p-2 px-4 border border-black rounded-xl shadow-xl bg-arelylle">
+						<span className="font-semibold">Cerrar sesión</span>
 					</button>
 				</a>
 			</div>
@@ -31,8 +31,8 @@ function Login() {
 
 	return (
 		<a href="/api/auth/login">
-			<button className="p-4 border border-black rounded-xl shadow-xl">
-				Iniciar sesión
+			<button className="p-2 px-4 border border-black rounded-xl shadow-xl bg-arelylle">
+				<span className="font-semibold">Iniciar sesión</span>
 			</button>
 		</a>
 	);

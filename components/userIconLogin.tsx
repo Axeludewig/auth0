@@ -12,7 +12,7 @@ function UserIconLogin() {
 	if (isLoading) {
 		return (
 			<div className="p-2 my-auto mx-auto animate-bounce">
-				<HourglassBottomIcon className="md:w-8 md:h-8" />
+				<HourglassBottomIcon className="w-8 h-8 md:w-8 md:h-8" />
 			</div>
 		);
 	}
@@ -26,13 +26,13 @@ function UserIconLogin() {
 			{user ? (
 				<div>
 					<a href="/user">
-						<PersonIcon className="md:w-8 md:h-8" />
+						<PersonIcon className="w-8 h-8 md:w-8 md:h-8" />
 					</a>
 				</div>
 			) : (
 				<div>
 					<a href="/api/auth/login">
-						<PersonIcon className="md:w-8 md:h-8" />
+						<PersonIcon className="w-8 h-8 md:w-8 md:h-8" />
 					</a>
 				</div>
 			)}
