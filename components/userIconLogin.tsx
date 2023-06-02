@@ -31,7 +31,7 @@ function UserIconLogin() {
 				</div>
 			) : (
 				<div>
-					<a href="/api/auth/login">
+					<a href="https://auth0-gamma.vercel.app/api/auth/login">
 						<PersonIcon className="w-8 h-8 md:w-8 md:h-8" />
 					</a>
 				</div>

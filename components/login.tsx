@@ -20,7 +20,7 @@ function Login() {
 		return (
 			<div className="flex flex-col gap-4">
 				<p>¡Bienvenido, {user.name}! </p>
-				<a href="/api/auth/logout">
+				<a href="https://auth0-gamma.vercel.app/api/auth/logout">
 					<button className="p-2 px-4 border border-black rounded-xl shadow-xl bg-arelylle">
 						<span className="font-semibold">Cerrar sesión</span>
 					</button>
@@ -30,7 +30,7 @@ function Login() {
 	}
 
 	return (
-		<a href="/api/auth/login">
+		<a href="https://auth0-gamma.vercel.app/api/auth/login">
 			<button className="p-2 px-4 border border-black rounded-xl shadow-xl bg-arelylle">
 				<span className="font-semibold">Iniciar sesión</span>
 			</button>
